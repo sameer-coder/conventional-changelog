@@ -17,7 +17,7 @@
     "generation"
   ],
   "license": "ISC",
-  "main": "",
+  "main": "packages/conventional-recommended-bump/index.js",
   "name": "conventional-changelog-monorepo",
   "private": true,
   "renovate": {
