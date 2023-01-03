@@ -42,8 +42,8 @@
     "test-windows": "c8 mocha --timeout 60000 packages/*/test{,/*}.js"
   },
   "exports": {
-    "conventional-changelog-conventionalcommits": "./packages/conventional-recommended-bump/index.js",
-    "conventional-recommended-bump": "./packages/conventional-recommended-bump/index.js"
+    "conventionalchangelogconventionalcommits": "./packages/conventional-recommended-bump/index.js",
+    "conventionalrecommendedbump": "./packages/conventional-recommended-bump/index.js"
   },
   "version": "1.0.0",
   "devDependencies": {
