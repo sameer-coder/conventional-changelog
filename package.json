@@ -17,7 +17,6 @@
     "generation"
   ],
   "license": "ISC",
-  "main": "",
   "name": "conventional-changelog-monorepo",
   "private": true,
   "renovate": {
