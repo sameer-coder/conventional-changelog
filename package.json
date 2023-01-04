@@ -9,7 +9,9 @@
   "engines": {
     "node": ">=10"
   },
-  "files": [],
+  "files": [
+    "packages"
+  ],
   "homepage": "https://github.com/conventional-changelog/conventional-changelog#readme",
   "keywords": [
     "conventional-changelog",
@@ -17,7 +19,7 @@
     "generation"
   ],
   "license": "ISC",
-  "main": "packages/conventional-recommended-bump/index.js",
+  "main": "packages/conventional-recommended-bump",
   "name": "conventional-changelog-monorepo",
   "private": true,
   "renovate": {
