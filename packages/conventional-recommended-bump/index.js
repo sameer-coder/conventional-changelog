@@ -83,9 +83,9 @@ function conventionalRecommendedBump (optionsArgument, parserOptsArgument, logIn
             warn('No commits since last release')
           }
 
-          // logInfo('calling whatBump')
+          warn('calling whatBump')
           let result = whatBump(commits, options)
-          // logInfo(`result is ${result}`)
+          warn(`result is ${result}`)
 
           if (result && result.level != null) {
             result.releaseType = VERSIONS[result.level]
