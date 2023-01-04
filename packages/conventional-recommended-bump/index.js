@@ -12,6 +12,7 @@ const VERSIONS = ['major', 'minor', 'patch']
 module.exports = conventionalRecommendedBump
 
 function conventionalRecommendedBump (optionsArgument, parserOptsArgument, logInfo, cbArgument) {
+  logInfo('Staring conventionalRecommendedBump.....................')
   if (typeof optionsArgument !== 'object') {
     throw new Error('The \'options\' argument must be an object.')
   }
@@ -84,6 +85,7 @@ function conventionalRecommendedBump (optionsArgument, parserOptsArgument, logIn
           }
 
           warn('calling whatBump')
+          throw new Error(JSON.stringify(commits))
           let result = whatBump(commits, options)
           warn(`result is ${result}`)
 
