@@ -83,7 +83,7 @@ function conventionalRecommendedBump (optionsArgument, parserOptsArgument, logIn
             warn('No commits since last release')
           }
 
-          logInfo('calling whatBump')
+          // logInfo('calling whatBump')
           let result = whatBump(commits, options)
           // logInfo(`result is ${result}`)
 
