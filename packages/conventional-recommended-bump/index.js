@@ -11,7 +11,7 @@ const VERSIONS = ['major', 'minor', 'patch']
 
 module.exports = conventionalRecommendedBump
 
-function conventionalRecommendedBump (optionsArgument, parserOptsArgument, cbArgument) {
+function conventionalRecommendedBump (optionsArgument, parserOptsArgument, cbArgument, logInfo) {
   if (typeof optionsArgument !== 'object') {
     throw new Error('The \'options\' argument must be an object.')
   }
@@ -84,6 +84,7 @@ function conventionalRecommendedBump (optionsArgument, parserOptsArgument, cbArg
           }
 
           let result = whatBump(commits, options)
+          logInfo(`result is ${JSON.stringify(result)}`)
 
           if (result && result.level != null) {
             result.releaseType = VERSIONS[result.level]
