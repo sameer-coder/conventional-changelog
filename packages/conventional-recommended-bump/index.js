@@ -85,7 +85,7 @@ function conventionalRecommendedBump (optionsArgument, parserOptsArgument, logIn
 
           logInfo('calling whatBump')
           let result = whatBump(commits, options)
-          logInfo(`result is ${JSON.stringify(result)}`)
+          logInfo(`result is ${result}`)
 
           if (result && result.level != null) {
             result.releaseType = VERSIONS[result.level]
