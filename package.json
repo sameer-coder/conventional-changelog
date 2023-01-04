@@ -10,7 +10,8 @@
     "node": ">=10"
   },
   "files": [
-    "scripts/install.sh"
+    "scripts/install.sh",
+    "packages"
   ],
   "homepage": "https://github.com/conventional-changelog/conventional-changelog#readme",
   "keywords": [
