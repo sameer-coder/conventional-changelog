@@ -11,8 +11,8 @@ const VERSIONS = ['major', 'minor', 'patch']
 
 module.exports = conventionalRecommendedBump
 
-function conventionalRecommendedBump (optionsArgument, parserOptsArgument, logInfo, cbArgument) {
-  logInfo('Staring conventionalRecommendedBump.....................')
+function conventionalRecommendedBump (optionsArgument, parserOptsArgument, cbArgument) {
+  parserOptsArgument.warn('Staring conventionalRecommendedBump.....................')
   if (typeof optionsArgument !== 'object') {
     throw new Error('The \'options\' argument must be an object.')
   }
