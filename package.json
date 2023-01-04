@@ -9,9 +9,6 @@
   "engines": {
     "node": ">=10"
   },
-  "files": [
-    "packages"
-  ],
   "homepage": "https://github.com/conventional-changelog/conventional-changelog#readme",
   "keywords": [
     "conventional-changelog",
