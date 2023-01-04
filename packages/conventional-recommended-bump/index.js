@@ -1,8 +1,8 @@
 'use strict'
 const concat = require('concat-stream')
-const conventionalCommitsFilter = require('conventional-commits-filter')
-const conventionalCommitsParser = require('conventional-commits-parser')
-const conventionalChangelogPresetLoader = require('conventional-changelog-preset-loader')
+const conventionalCommitsFilter = require('../conventional-commits-filter')
+const conventionalCommitsParser = require('../conventional-commits-parser')
+const conventionalChangelogPresetLoader = require('../conventional-changelog-preset-loader')
 const gitSemverTags = require('git-semver-tags')
 const gitRawCommits = require('git-raw-commits')
 const presetResolver = require('./preset-resolver')
