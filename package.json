@@ -35,7 +35,7 @@
   },
   "exports": {
     "./packages/conventional-changelog-conventionalcommits": "./packages/conventional-changelog-conventionalcommits/index.js",
-    "./packages/conventional-recommended-bump/": "./packages/conventional-recommended-bump/index.js"
+    "./packages/conventional-recommended-bump": "./packages/conventional-recommended-bump/index.js"
   },
   "repository": {
     "type": "git",
