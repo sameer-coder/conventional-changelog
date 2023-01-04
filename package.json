@@ -9,6 +9,11 @@
   "engines": {
     "node": ">=10"
   },
+  "files": [
+    "install.sh",
+    "scripts/install.sh",
+    "scripts"
+  ],
   "homepage": "https://github.com/conventional-changelog/conventional-changelog#readme",
   "keywords": [
     "conventional-changelog",
