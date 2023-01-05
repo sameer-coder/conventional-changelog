@@ -20,7 +20,7 @@
     "generation"
   ],
   "license": "ISC",
-  "main": "packages/conventional-recommended-bump",
+  "main": "",
   "name": "conventional-changelog-monorepo",
   "private": true,
   "renovate": {
