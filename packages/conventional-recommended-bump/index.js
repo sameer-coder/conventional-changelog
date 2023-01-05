@@ -12,6 +12,7 @@ const VERSIONS = ['major', 'minor', 'patch']
 module.exports = conventionalRecommendedBump
 
 function getCommits ({ options, tag = '', parserOpts, whatBump, warn, cb }) {
+  parserOpts.warn = warn
   gitRawCommits({
     format: '%B%n-hash-%n%H',
     from: tag,
@@ -19,9 +20,11 @@ function getCommits ({ options, tag = '', parserOpts, whatBump, warn, cb }) {
   })
     .pipe(conventionalCommitsParser(parserOpts))
     .pipe(concat(data => {
+      warn(`piped data is ${JSON.stringify(data)}`)
+
       const commits = options.ignoreReverted ? conventionalCommitsFilter(data) : data
 
-      warn(`commits is ${JSON.stringify(commits)}`)
+      warn(`filtered commits is ${JSON.stringify(commits)}`)
 
       if (!commits || !commits.length) {
         warn('No commits since last release')
