@@ -87,6 +87,7 @@ function conventionalRecommendedBump (optionsArgument, parserOptsArgument, cbArg
     const warn = typeof parserOpts.warn === 'function' ? parserOpts.warn : noop
 
     if (options.baseTag) {
+      warn(`using baseTag for bump ${options.baseTag}`)
       getCommits({ options, tag: options.baseTag, parserOpts, whatBump, warn, cb })
       return
     }
