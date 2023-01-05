@@ -21,6 +21,8 @@ function getCommits ({ options, tag = '', parserOpts, whatBump, warn, cb }) {
     .pipe(concat(data => {
       const commits = options.ignoreReverted ? conventionalCommitsFilter(data) : data
 
+      warn(`commits is ${JSON.stringify(commits)}`)
+
       if (!commits || !commits.length) {
         warn('No commits since last release')
       }
@@ -38,6 +40,7 @@ function getCommits ({ options, tag = '', parserOpts, whatBump, warn, cb }) {
 }
 
 function conventionalRecommendedBump (optionsArgument, parserOptsArgument, cbArgument) {
+  parserOptsArgument.warn('Inside.................')
   if (typeof optionsArgument !== 'object') {
     throw new Error('The \'options\' argument must be an object.')
   }
