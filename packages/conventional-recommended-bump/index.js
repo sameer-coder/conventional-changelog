@@ -12,7 +12,6 @@ const VERSIONS = ['major', 'minor', 'patch']
 module.exports = conventionalRecommendedBump
 
 function getCommits ({ options, tag = '', parserOpts, whatBump, warn, cb }) {
-  parserOpts.warn = warn
   gitRawCommits({
     format: '%B%n-hash-%n%H',
     from: tag,
@@ -20,11 +19,7 @@ function getCommits ({ options, tag = '', parserOpts, whatBump, warn, cb }) {
   })
     .pipe(conventionalCommitsParser(parserOpts))
     .pipe(concat(data => {
-      warn(`piped data is ${JSON.stringify(data)}`)
-
       const commits = options.ignoreReverted ? conventionalCommitsFilter(data) : data
-
-      warn(`filtered commits is ${JSON.stringify(commits)}`)
 
       if (!commits || !commits.length) {
         warn('No commits since last release')
@@ -43,7 +38,6 @@ function getCommits ({ options, tag = '', parserOpts, whatBump, warn, cb }) {
 }
 
 function conventionalRecommendedBump (optionsArgument, parserOptsArgument, cbArgument) {
-  parserOptsArgument.warn('Inside.................')
   if (typeof optionsArgument !== 'object') {
     throw new Error('The \'options\' argument must be an object.')
   }
@@ -93,8 +87,7 @@ function conventionalRecommendedBump (optionsArgument, parserOptsArgument, cbArg
     const warn = typeof parserOpts.warn === 'function' ? parserOpts.warn : noop
 
     if (options.baseTag) {
-      warn(`using baseTag for bump ${options.baseTag}`)
-      getCommits({ options, tag: options.baseTag, parserOpts, whatBump, warn: parserOptsArgument.warn, cb })
+      getCommits({ options, tag: options.baseTag, parserOpts, whatBump, warn, cb })
       return
     }
 

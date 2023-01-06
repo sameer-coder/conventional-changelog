@@ -15,11 +15,11 @@
     "type": "git",
     "url": "https://github.com/conventional-changelog/conventional-changelog.git"
   },
-  "main": "index.js",
   "license": "MIT",
   "engines": {
     "node": ">=10"
   },
+  "main": "index.js",
   "files": [
     "index.js",
     "cli.js",
